@@ -3,3 +3,7 @@
     font-size:20px;
 }
 
+.mat-raised-button{
+    border-radius: 50rem !important;
+    outline: none;
+}

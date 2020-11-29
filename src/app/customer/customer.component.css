@@ -9,3 +9,8 @@
 .mat-form-field{
     width:500px;
 }
+
+.mat-raised-button{
+    border-radius: 50rem !important;
+    outline: none;
+}
