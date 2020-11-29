@@ -1,0 +1,11 @@
+.heading{
+    font-size: 28px;
+    line-height: 1.17;
+    margin-bottom: 24px;
+    color: #353535;
+    margin-top: 20px;
+}
+
+.mat-form-field{
+    width:500px;
+}

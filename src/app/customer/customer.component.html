@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<div style="margin:2%;">
+    <div class="d-flex align-items-center justify-content-center" style="background-color: white;height:82vh">
+        <div>
+            <div class="heading text-center">Add Customer</div>
+            <form #customerForm="ngForm" (ngSubmit)="onSubmit(customerForm.value)">
+                <div class="form-group">
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Ex: Nikhil" class="form-control" name="name" ngModel required>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                </mat-form-field>
+            </div>
+            <div class="example-container">
+                <mat-form-field appearance="outline">
+                  <mat-label>Enter your email</mat-label>
+                  <input matInput placeholder="pat@example.com" class="form-control" name="email" ngModel required>
+                  <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+              </div>
+
+            <div>
+              <mat-form-field appearance="outline">
+                <mat-label>Phone number</mat-label>
+                <input matInput placeholder="Ex: +91 9880787546" class="form-control" name="phone" ngModel required>
+                <mat-icon matSuffix>phone</mat-icon>
+                <mat-hint>Include area code</mat-hint>
+              </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput placeholder="#92, Anubhavanagar,Bengaluru" class="form-control" name="Address" ngModel></textarea>
+                  </mat-form-field>
+            </div>
+
+            <div class="row">
+                <div class="spacer"></div>
+                <button type="submit" mat-raised-button  color="primary" style="margin-right: 20px;" >Submit</button>
+            </div>
+
+            </div>
+            </form>
+              
+        </div>
+    </div>
+</div>

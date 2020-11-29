@@ -1,4 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-color: #F1F1F1; }
+
+.spacer{
+    flex: 1 1 auto;
+  }
+
+.btn-custom-primary {
+    color: #fff;
+    background-color: #73d64d;
+    border-color: #73d64d;
+    box-shadow: none;
+    outline: none;
+    border-radius: 50rem !important;
+  }
+  
+.btn-custom-primary:hover{
+    color: #fff;
+  }
+
+.mat-raised-button{
+    border-radius: 50rem !important;
+    outline: none;
+}
