@@ -4,14 +4,13 @@
     <div class="d-flex align-items-center justify-content-center" style="background-color: white;height:82vh">
         <div>
             <div class="heading text-center">Add Customer</div>
-            <form #customerForm="ngForm" (ngSubmit)="onSubmit(customerForm.value)">
+            <!-- <form #customerForm="ngForm" (ngSubmit)="onSubmit(customerForm.value)">
                 <div class="form-group">
             <div>
                 <mat-form-field appearance="outline">
                     <mat-label>Name</mat-label>
                     <input matInput placeholder="Ex: Nikhil" class="form-control" name="name" ngModel required>
                     <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
-                    <!-- <mat-hint>Hint</mat-hint> -->
                 </mat-form-field>
             </div>
             <div class="example-container">
@@ -44,8 +43,49 @@
             </div>
 
             </div>
-            </form>
+            </form> -->
               
+
+            <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput #refName placeholder="Ex: Nikhil" class="form-control" formControlName="name" >
+                    <mat-error *ngIf="customerForm.controls['name'].hasError('required')">{{"Please enter a name"}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="example-container">
+                <mat-form-field appearance="outline">
+                  <mat-label>Enter your email</mat-label>
+                  <input matInput #refEmail placeholder="pat@example.com" class="form-control" formControlName="email"  >
+                  <mat-error *ngIf="customerForm.controls['name'].invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+              </div>
+
+            <div>
+              <mat-form-field appearance="outline">
+                <mat-label>Phone number</mat-label>
+                <input matInput #refPhone placeholder="Ex: +91 9880787546" class="form-control" formControlName="phone"  >
+                <mat-icon matSuffix>phone</mat-icon>
+                <mat-hint>Include area code</mat-hint>
+              </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput #refAddress placeholder="#92, Anubhavanagar,Bengaluru" class="form-control" formControlName="address" ></textarea>
+                  </mat-form-field>
+            </div>
+
+            <div class="row">
+                <div class="spacer"></div>
+                <button type="submit"  mat-raised-button  color="primary" style="margin-right: 20px;" >Submit</button>
+            </div>
+
+            </div>
+            </form>
         </div>
     </div>
 </div>
