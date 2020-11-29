@@ -30,3 +30,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-c
   border-radius: 20px;
   overflow-x: hidden !important; 
 }
+
+.green-snackbar {
+  background: green;
+  color:white;
+}
+
+.red-snackbar {
+  background: red;
+  color:white;
+}
