@@ -59,7 +59,8 @@
                 <mat-form-field appearance="outline">
                   <mat-label>Enter your email</mat-label>
                   <input matInput #refEmail placeholder="pat@example.com" class="form-control" formControlName="email"  >
-                  <mat-error *ngIf="customerForm.controls['name'].invalid">{{getErrorMessage()}}</mat-error>
+                  <mat-error *ngIf="customerForm.controls['email'].hasError('email')">{{"Invalid Email"}}</mat-error>
+                  <mat-error *ngIf="customerForm.controls['email'].hasError('required')">{{"Please enter a valid email"}}</mat-error>
                 </mat-form-field>
               </div>
 
@@ -68,6 +69,7 @@
                 <mat-label>Phone number</mat-label>
                 <input matInput #refPhone placeholder="Ex: +91 9880787546" class="form-control" formControlName="phone"  >
                 <mat-icon matSuffix>phone</mat-icon>
+                <mat-error *ngIf="customerForm.controls['phone'].hasError('required')">{{"Please enter the phone number"}}</mat-error>
                 <mat-hint>Include area code</mat-hint>
               </mat-form-field>
             </div>
@@ -76,12 +78,14 @@
                 <mat-form-field appearance="outline">
                     <mat-label>Address</mat-label>
                     <textarea matInput #refAddress placeholder="#92, Anubhavanagar,Bengaluru" class="form-control" formControlName="address" ></textarea>
+                    <mat-error *ngIf="customerForm.controls['address'].hasError('required')">{{"Please enter the address"}}</mat-error>
+
                   </mat-form-field>
             </div>
 
             <div class="row">
                 <div class="spacer"></div>
-                <button type="submit"  mat-raised-button  color="primary" style="margin-right: 20px;" >Submit</button>
+                <button type="submit"  [disabled]="!customerForm.valid"  mat-raised-button  color="primary" style="margin-right: 20px;" >Submit</button>
             </div>
 
             </div>

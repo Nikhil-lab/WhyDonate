@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  // apiUrl:" https://customerdemoapi.herokuapp.com/api/customer/",
-  apiUrl:"http://localhost:3000/whydonate",
+  apiUrl:" https://customerdemoapi.herokuapp.com/api/customer/",
+  // apiUrl:"http://localhost:3000/whydonate",
 };
 
 /*apiUrl:"http://localhost:3000"

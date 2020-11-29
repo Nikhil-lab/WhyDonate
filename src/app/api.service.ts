@@ -13,7 +13,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getData(){ 
-   return this.http.get(API_URL);
+   return this.http.get<any[]>(API_URL);
    }
 
    getDataByParamater(parameter:string){

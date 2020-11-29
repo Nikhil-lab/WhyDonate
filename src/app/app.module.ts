@@ -16,6 +16,8 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 
@@ -50,6 +52,7 @@ import { ApiService } from './api.service';
     MatInputModule,
     MatTableModule,
     MatIconModule,
+    MatDialogModule,
     FontAwesomeModule
   ],
   providers: [ApiService],
