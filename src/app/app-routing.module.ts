@@ -6,7 +6,7 @@ import { WhydonateComponent } from './whydonate/whydonate.component';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'whydonate'},
+  { path: '', pathMatch: 'full', redirectTo: 'home'},
   {path:'whydonate', component:WhydonateComponent},
   {path:'home',component:HomeComponent},
   {path:'addCustomers',component:CustomerComponent}

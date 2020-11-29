@@ -17,6 +17,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 
 
@@ -27,6 +29,7 @@ import { HomeComponent } from './home/home.component';
 import { CustomerComponent } from './customer/customer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ApiService } from './api.service';
+import { CustomerdetailsComponent } from './customerdetails/customerdetails.component';
 
 
 @NgModule({
@@ -35,7 +38,8 @@ import { ApiService } from './api.service';
     WhydonateComponent,
     HeaderComponent,
     HomeComponent,
-    CustomerComponent
+    CustomerComponent,
+    CustomerdetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +57,7 @@ import { ApiService } from './api.service';
     MatTableModule,
     MatIconModule,
     MatDialogModule,
+    MatToolbarModule,
     FontAwesomeModule
   ],
   providers: [ApiService],

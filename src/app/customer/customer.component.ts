@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, FormGroupDirective, Validators} from '@angular/forms';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -44,14 +44,21 @@ export class CustomerComponent implements OnInit {
     })
   }
 
-  onSubmit(){
+  onSubmit(customerForm:any,formDirective: FormGroupDirective){
     console.log(this.customerForm.value);
+
     
     this.api.getData().subscribe(data=>{
       console.log("received data from server");
       console.log(data);
-      this.customerForm.reset();
+      debugger;
+      
     })
+    
+    formDirective.resetForm();
+    customerForm.reset();
+    
+    
     
   }
 

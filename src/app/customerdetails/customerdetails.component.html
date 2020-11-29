@@ -1,0 +1,35 @@
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Customer Details</span>
+      <span class="spacer"></span>
+      <mat-icon fontSet="fas" [mat-dialog-close] fontIcon="fa-times"></mat-icon>      
+  
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div  mat-dialog-content class="mt-2" style="margin:auto">
+    <!-- <label class="cust-grey"></label> -->
+    <div>
+        <span><b>Customer ID:</b></span>{{this.customerDetails.id}}   
+    </div>
+    <div>
+        <span><b>Customer Name:</b></span>&nbsp; {{this.customerDetails.name}}   
+    </div>
+    <div>
+        <span><b>Customer Email:</b></span>&nbsp; {{this.customerDetails.email}}   
+    </div>
+    <div>
+        <span><b>Customer Address:</b></span>&nbsp;{{this.customerDetails.address}}   
+    </div>
+    <div>
+        <span><b>Customer Phone:</b></span>&nbsp;{{this.customerDetails.phone}}   
+    </div>
+    <div>
+        <span><b>Customer Created At:</b></span>&nbsp;{{this.customerDetails.created_at}}   
+    </div>
+    <div>
+        <span><b>Customer Updated At:</b></span>&nbsp;{{this.customerDetails.updated_at}}   
+    </div>
+
+  </div>

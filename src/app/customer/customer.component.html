@@ -46,7 +46,7 @@
             </form> -->
               
 
-            <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="customerForm" #formDirective="ngForm" (ngSubmit)="onSubmit(customerForm,formDirective)">
                 <div class="form-group">
             <div>
                 <mat-form-field appearance="outline">

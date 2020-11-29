@@ -1,0 +1,17 @@
+.btn{
+    width:80px;
+}
+
+.full-width {
+    width: 100%;
+  }
+
+.custom-label{
+      width:30%;
+      font-weight:bold;
+  }
+
+.mat-toolbar.mat-primary {
+    background: #3f51b5;
+    color: #fff;
+}

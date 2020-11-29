@@ -24,3 +24,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-c
     border-radius: 50rem !important;
     outline: none;
 }
+
+.myapp-no-padding-dialog .mat-dialog-container {
+  padding: 0;
+  border-radius: 20px;
+  overflow-x: hidden !important; 
+}

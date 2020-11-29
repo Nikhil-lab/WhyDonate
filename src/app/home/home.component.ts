@@ -1,9 +1,11 @@
 
 import {AfterViewInit, Component, ViewChild,OnInit} from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { ApiService } from '../api.service';
+import { CustomerdetailsComponent } from '../customerdetails/customerdetails.component';
 
 
 export interface CustomerData {
@@ -31,7 +33,7 @@ export class HomeComponent implements OnInit,AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private _service:ApiService) {
+  constructor(private _service:ApiService,private _dialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -60,6 +62,17 @@ export class HomeComponent implements OnInit,AfterViewInit {
 
   viewDetails(row){
     console.log(row);
+
+
+    const dialogRef=this._dialog.open(CustomerdetailsComponent ,{panelClass: 'myapp-no-padding-dialog',
+                    data: {
+                      crud:"Add",
+                      row:row,
+                      
+                    },
+                    height: '320px',
+                     width: '400px',
+                  });
   }
 
 }
