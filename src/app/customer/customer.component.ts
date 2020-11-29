@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, FormGroupDirective, Validators} from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -18,7 +19,7 @@ export class CustomerComponent implements OnInit {
 
   customerForm: FormGroup;
 
-  constructor(private api:ApiService,private _formBuilder:FormBuilder) { }
+  constructor(private api:ApiService,private _formBuilder:FormBuilder,private _snackBar: MatSnackBar) { }
 
   // getErrorMessage() {
   //   if (this.customerForm.controls['name'].hasError('required')) {
@@ -52,7 +53,19 @@ export class CustomerComponent implements OnInit {
       console.log("received data from server");
       console.log(data);
       debugger;
-      
+      this._snackBar.open('Customer added successfully','', {
+        duration: 500,
+        horizontalPosition: "right",
+        verticalPosition: "top",
+        panelClass:['green-snackbar']
+      });
+    },(error)=>{
+      this._snackBar.open('Server error, Customer not added !!','', {
+        duration: 500,
+        horizontalPosition: "right",
+        verticalPosition: "top",
+        panelClass:['red-snackbar']
+      });
     })
     
     formDirective.resetForm();

@@ -66,11 +66,11 @@ export class HomeComponent implements OnInit,AfterViewInit {
 
     const dialogRef=this._dialog.open(CustomerdetailsComponent ,{panelClass: 'myapp-no-padding-dialog',
                     data: {
-                      crud:"Add",
+                      
                       row:row,
                       
                     },
-                    height: '320px',
+                    height: '400px',
                      width: '400px',
                   });
   }
