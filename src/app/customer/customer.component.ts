@@ -49,7 +49,7 @@ export class CustomerComponent implements OnInit {
     console.log(this.customerForm.value);
 
     
-    this.api.getData().subscribe(data=>{
+    this.api.postData(this.customerForm.value).subscribe(data=>{
       console.log("received data from server");
       console.log(data);
       debugger;
