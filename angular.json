@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "WhyDonate"
+  "defaultProject": "WhyDonate",
+  "cli": {
+    "analytics": "6259dc54-b6c3-4e3d-8ab8-419c1f4499a4"
+  }
 }
